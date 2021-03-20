@@ -1,5 +1,6 @@
 # responsive-prop 
-A small package that allows you to 
+A small package that creates media queries based on breakpoints and props.
+Could be useful for creating reusable and responsive styled components.
 ## Install
 ```npm install responsive-prop```
 ## Usage
