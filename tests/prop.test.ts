@@ -1,4 +1,4 @@
-import { createResponsiveProp } from '../src/index';
+import createResponsiveProp from '../src/index';
 
 const dummyBreakpoints = [1, 2, 3, 4, 5];
 
@@ -50,6 +50,25 @@ test('short breakpoints', () => {
 }
 @media screen and (min-width: 690px) {
   width: 300px;
+}`
+  );
+});
+
+test('default breakpoints', () => {
+  const rp = createResponsiveProp();
+  expect(rp('width', [100, 200, 300, 400, 500])).toBe(
+`width: 100px;
+@media screen and (min-width: 480px) {
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  width: 300px;
+}
+@media screen and (min-width: 1024px) {
+  width: 400px;
+}
+@media screen and (min-width: 1280px) {
+  width: 500px;
 }`
   );
 });

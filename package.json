@@ -1,5 +1,5 @@
 {
-  "name": "responsive-props",
+  "name": "responsive-prop",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "test": "jest --config jestconfig.json",
     "prepublish": "npm run build"
   },
-  "keywords": [],
+  "keywords": ["responsive", "prop", "props", "media", "query", "css", "styled", "components"],
   "files": [
     "dist/**/*"
   ],
