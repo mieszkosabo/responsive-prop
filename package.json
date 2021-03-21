@@ -1,6 +1,6 @@
 {
   "name": "responsive-prop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small package that creates media queries based on breakpoints and props. Could be useful for creating reusable and responsive styled components.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
