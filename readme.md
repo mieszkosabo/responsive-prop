@@ -1,11 +1,14 @@
 # responsive-prop 
 A small package that creates media queries based on breakpoints and props.
 Could be useful for creating reusable and responsive styled components.
+
 ## Install
 ```npm install responsive-prop```
+
 ## Usage
+
 ~~~typescript
-import createResponsiveProp from 'responsive-prop'
+import { createResponsiveProp } from 'responsive-prop'
 
 // breakpoints should be an array of numbers (which will be changed to px
 const myBreakpoints1 = [450, 728, 1200, 1400];
@@ -52,7 +55,33 @@ rp3('width', [100, 200, 300, 400]);
 // @media screen and (min-width: 690px) {
 //   width: 300px;
 // }
-
-## real life example
-TODO
 ~~~
+
+## 💅 Styled Components Example
+
+~~~typescript
+import styled from 'styled-components';
+import { createResponsiveProp } from 'responsive-prop';
+const rp = createResponsiveProp(); // using default breakpoints here
+
+const ResponsiveRect = styled.div`
+    ${rp('width', [200, 300, 550, 720])}
+    ${rp('background-color', ['red', 'blue'])}
+    
+    ${({ theme }) => rp('padding', theme.dims.paddings)} // pretty lit
+    height: 200px;
+`;
+
+
+function App() {
+  return (
+      <ResponsiveRect />
+  );
+}
+
+export default App;
+~~~
+
+## Roadmap
+
+I might add possibility to use object syntax in future. 
